@@ -38,6 +38,7 @@ font-size: 20px;
         font-size: 20px;
         padding: 5px 10px;
         border: none;
+        margin-left: 20px;
       }
       .btn{
         background-color: #FF3CAC;
@@ -47,6 +48,7 @@ font-size: 20px;
         border: none;
         cursor: pointer;
       }
+     
     </style>
 </head>
 <body>
@@ -58,6 +60,7 @@ font-size: 20px;
         </div>
         <div class="button-div">
             <button class="btn num-input" type="button" onclick="calculate()">Calculate</button>
+            <button class="btn num-input" type="reset" onclick="reset()">Reset</button>
         </div>
     </div>
 
@@ -67,9 +70,16 @@ function calculate(){
  const r= parseFloat(input1.value);   //convert string to float number
  const area=3.14*r*r;     //calculate the area using formula: A=πr^2
 console.log(area);
-const ansEle= docum
-}
+const ansEle= document.getElementById("ans");   //get the element where answer will be displayed
+ansEle.innerHTML =`Answer:${area} m<sup>2</sup>`;    //display the result in html page
 
+}
+function reset(){
+    const input1= document.getElementById("radius");
+    const ansEle= document.getElementById("ans"); 
+    input1.value="";
+    ansEle.innerText="";
+}
     </script>
 </body>
 </html>
