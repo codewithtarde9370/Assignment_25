@@ -5,16 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area of circle</title>
     <style>
-      
+      body{
+        background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+min-height: 100vh;
+      }
+      .title{
+background-color: #ffffff;
+color: #FF3CAC;
+height: 50px;
+display:inline-block;
+border-radius: 10px;
+padding: 0 10px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+margin-left: 35%;
+      }
+      .container{
+        background-color: white;
+        width: 400px;
+        display: block;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .num-input{
+        width: 80%;
+        display: block;
+        margin: 10px auto;
+font-size: 20px;
+      }
+      #ans{
+        font-size: 20px;
+        padding: 5px 10px;
+        border: none;
+      }
+      .btn{
+        background-color: #FF3CAC;
+        border-radius: 50px;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+      }
     </style>
 </head>
 <body>
-    <h1>Circle Area Calculator</h1>
-    <div class="input-div">
-        <input type="text" id="radius" placeholder="Enter radius here">
-    </div>
-    <div class="button-div">
-        <button class="btn" type="button" onclick="calcualte()">Calculate</button>
+    <h1 class="title">Circle Area Calculator</h1>
+    <div class="container">
+        <div class="input-div">
+            <input type="text" id="radius" placeholder="Enter radius here" class="num-input">
+            <p id="ans">Answer:</p>
+        </div>
+        <div class="button-div">
+            <button class="btn num-input" type="button" onclick="calculate()">Calculate</button>
+        </div>
     </div>
 
     <script>
@@ -23,7 +67,9 @@ function calculate(){
  const r= parseFloat(input1.value);   //convert string to float number
  const area=3.14*r*r;     //calculate the area using formula: A=πr^2
 console.log(area);
+const ansEle= docum
 }
+
     </script>
 </body>
 </html>
