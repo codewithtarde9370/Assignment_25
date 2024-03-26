@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Area of circle</title>
     <style>
-
+      
     </style>
 </head>
 <body>
     <h1>Circle Area Calculator</h1>
+    <div class="input-div">
+        <input type="text" id="radius" placeholder="Enter radius here">
+    </div>
+    <div class="button-div">
+        <button class="btn" type="button" onclick="calcualte()">Calculate</button>
+    </div>
+
+    <script>
+function calculate(){
+ const input1= document.getElementById("radius");  //get the value of radius from user's input
+ const r= parseFloat(input1.value);   //convert string to float number
+ const area=3.14*r*r;     //calculate the area using formula: A=πr^2
+console.log(area);
+}
+    </script>
 </body>
 </html>
